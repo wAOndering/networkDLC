@@ -1,0 +1,461 @@
+# Project definitions (do not edit)
+Task: shockTestTKCTom
+scorer: TKC
+date: May20
+multianimalproject: true
+
+    # Project path (change when moving around)
+project_path: C:\Users\Windows\Desktop\Newfolder\maTest-tom-2020-05-25
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\Windows\Desktop\Newfolder\maTest-tom-2020-05-25\videos\outputALLVID.mp4:
+    crop: 0, 1280, 0, 1024
+individuals:
+- individual1
+uniquebodyparts:
+- headbar_ant # anterior corner of the headbar 
+- headbar_post # posterior corner of the headbar
+- posthole # transition between edge of the hole and metalic visible section with the most contrast
+
+multianimalbodyparts:
+# the rationale behind labeling is to label extremeties and then fill the points
+# all the point of reference are for the mouse left is left of the animal
+# when blurry on a paw should still place the center of mass eg. paw_antL
+
+
+###################################################################################
+# marker that can be set without zooming
+###################################################################################
+
+# marker that should be set generally to frame the mouse
+- tail_ant # most anterior section of the tail which is visible the label should be placed at the center of the media-lateral point at this level
+- tail_post # most posterior section of the tail which is visible the label should be placed at the center of the media-lateral point at this level
+- tail_mid # equidistant point between tail_ant and tail_post section of the tail which is visible the label should be placed at the center of the media-lateral point at this level
+
+# the body part have been decided to be labled to be able to see hunch posture of the mouse
+# label should be placed at the edge of the animal on:
+- paw_postL # posterior right paw center of mass of the paw in the metacarpus area
+- paw_antR # anterior right paw center of mass of the paw in the metacarpus area
+- paw_antL # anterior left paw center of mass of the paw in the metacarpus area
+- elbow_L # anterior left elbw of th the mouse
+
+- digit_aL2 # on the aneterior left paw digit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 2nd digit from medial to lateral (the first digit is never visible)
+- digit_aL3 # on the aneterior left pawdigit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 3rd digit from medial to lateral (the first digit is never visible)
+- digit_aL4 # on the aneterior left pawdigit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 4th digit from medial to lateral (the first digit is never visible)
+- digit_aL5 # on the aneterior left pawdigit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 5th digit from medial to lateral (the first digit is never visible)
+- digit_aR2 # on the aneterior right paw digit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 2nd digit from medial to lateral (the first digit is never visible)
+- digit_aR3 # on the aneterior right pawdigit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 3rd digit from medial to lateral (the first digit is never visible)
+- digit_aR4 # on the aneterior right pawdigit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 4th digit from medial to lateral (the first digit is never visible)
+- digit_aR5 # on the aneterior right pawdigit labeling at the local visible maxima/(center of digit) of the curve formed by the digit (tips) numbering is followng anatomical nomenclature 5th digit from medial to lateral (the first digit is never visible)
+
+- body_antDor # the most anterior part at the minium turning point above the eye
+- body_postMax # the most posterior part of the animal at the turning point
+- body_dor # the most dorsal part of the animal at the local maxima turning point
+- body_post # point that is the local maxima (center point) for the curve formed by extremeties [body_dor:body_postMax] along the body
+- body_postVent # junction between the leg  and the body of the mouse  and the body
+
+- mouth_latL #label is placed on the left lateral commissure part of the mouth 
+- mouth_latR #label is placed on the right lateral commissure part of the mouth 
+- mouth_dor # label on the outmost dorsal portion of the upper lip of the mouth 
+- mouth_vent  # label on the outmost ventral portion of the lower lip of the mouth  // no label when the mouth is closed
+- mouth_open  #on the tip of the tongue on the tip / turning point of the tongue no label if the mouth is not open and if the tongue is not visible the lablel shall be placed on the high contrastr transtion point in the center of the open mouth
+- salivadrop #when mouse is drooling (proposal)
+
+- whisk_dor # whisker follicle with the most contrast located dorsally (those are approximation most difficult part to consistently lablel should be consider as a set with whisk_vent)
+- whisk_venti # whisker follical with the most contrst located ventrally of whisk_dor (those are approximation most difficult part to consistently lablel should be consider as a set with whisk_dor)
+
+- armR # right forelimb transition to the body should be place in the center of the forelimb
+- armL # left forelimb transition to the body should be place in the center of the forelimb
+- chest # point position on the local minima/turning point between armR and armL
+
+- ear_antDor # on the edge of the ear on the anterior dorsal part of the ear when the skin is clear of fur
+- ear_antVent # on the edge fo the ear on the anterior ventral part of the ear when the skin is clear of fur
+- ear_postMax # the most posterior part of the ear at the turning point
+- ear_dor  # equidistant point between ear_antDor and ear_postMax section of the ear which is visible
+- ear_vent # equidistant point between ear_antVent and ear_postMax section of the ear which is visible
+
+- snoutL # point on the snout of the animal define as the most postero-lateral point on the nostril opening // turning point
+- snoutR # point the snout which is the most lateral point visible on the animal should be very close to the medialateral turning point visible on the image
+- snoutTip # (local minima/turning point) of the snout most ventral part of the snout  
+
+###################################################################################
+# marker that should be label with zooming
+###################################################################################
+
+- eye_ant #label is placed on the anterior part of the eye where ventral and dorsal eyelid meet // in additon the label is placed on the edge of the eye-eyelid on the eye
+- eye_post #label is placed on the posterior part of the eye where ventral and dorsal eyelid meet // in additon the label is placed on the edge of the eye-eyelid on the eye
+- eye_dor #label is placed on the dorsal eyelid at the peak (local maxima/turning point) of the eyelid // in additon the label is placed on the edge of the eye-eyelid on the eye
+- eye_vent #label is placed on the ventral eyelid at the peak (local minima/turning point) of the eyelid // in additon the label is placed on the edge of the eye-eyelid on the eye
+
+- pupil_dor #label is placed on the dorsal part of the pupil
+- pupil_vent #label is placed on the ventral part of the pupiland diametrically opposed to pupil_dor 
+- pupil_ant #label is placed on the anterior part of the pupil
+- pupil_post #label is placed on the posterior part of the pupiland diametrically opposed to pupil_ant 
+
+skeleton:
+- - snoutL
+  - whisk_venti
+- - mouth_latL
+  - whisk_venti
+- - chest
+  - digit_aR2
+- - body_postMax
+  - tail_post
+- - mouth_dor
+  - mouth_latR
+- - armL
+  - chest
+- - ear_antVent
+  - ear_vent
+- - snoutR
+  - snoutTip
+- - pupil_ant
+  - pupil_dor
+- - armL
+  - digit_aL4
+- - ear_dor
+  - ear_postMax
+- - body_dor
+  - chest
+- - body_antDor
+  - body_postMax
+- - digit_aR3
+  - paw_antR
+- - body_postVent
+  - chest
+- - snoutL
+  - whisk_dor
+- - mouth_latL
+  - whisk_dor
+- - body_antDor
+  - tail_ant
+- - eye_dor
+  - pupil_dor
+- - armL
+  - ear_antVent
+- - mouth_latR
+  - whisk_venti
+- - armR
+  - mouth_latR
+- - armL
+  - body_post
+- - ear_antVent
+  - eye_dor
+- - body_postVent
+  - tail_post
+- - chest
+  - mouth_latR
+- - pupil_dor
+  - pupil_post
+- - ear_dor
+  - ear_vent
+- - body_antDor
+  - body_postVent
+- - eye_post
+  - snoutL
+- - body_post
+  - body_postMax
+- - mouth_open
+  - mouth_vent
+- - ear_postMax
+  - eye_post
+- - mouth_latL
+  - snoutL
+- - eye_ant
+  - snoutL
+- - body_postMax
+  - elbow_L
+- - ear_antDor
+  - ear_postMax
+- - ear_antVent
+  - ear_dor
+- - eye_ant
+  - eye_vent
+- - armR
+  - digit_aR2
+- - digit_aL2
+  - paw_antL
+- - eye_post
+  - pupil_post
+- - body_post
+  - elbow_L
+- - ear_postMax
+  - eye_dor
+- - body_antDor
+  - pupil_vent
+- - chest
+  - digit_aL2
+- - eye_dor
+  - pupil_vent
+- - eye_ant
+  - eye_dor
+- - snoutR
+  - whisk_dor
+- - chest
+  - elbow_L
+- - body_postVent
+  - tail_ant
+- - armR
+  - digit_aR5
+- - snoutL
+  - snoutTip
+- - body_post
+  - tail_ant
+- - armL
+  - elbow_L
+- - chest
+  - digit_aR5
+- - body_postMax
+  - tail_mid
+- - digit_aL5
+  - paw_antL
+- - mouth_dor
+  - mouth_open
+- - armR
+  - ear_antDor
+- - eye_dor
+  - snoutR
+- - armL
+  - digit_aL5
+- - ear_antVent
+  - eye_post
+- - ear_antDor
+  - paw_antR
+- - body_dor
+  - body_postVent
+- - armL
+  - paw_postL
+- - elbow_L
+  - paw_postL
+- - eye_dor
+  - pupil_ant
+- - ear_antDor
+  - eye_dor
+- - chest
+  - paw_antL
+- - pupil_ant
+  - pupil_vent
+- - armL
+  - digit_aL2
+- - eye_dor
+  - eye_post
+- - body_dor
+  - body_postMax
+- - body_antDor
+  - chest
+- - eye_post
+  - snoutR
+- - body_post
+  - body_postVent
+- - eye_vent
+  - pupil_vent
+- - body_postMax
+  - chest
+- - mouth_latL
+  - salivadrop
+- - eye_post
+  - eye_vent
+- - armL
+  - paw_antL
+- - ear_antDor
+  - ear_vent
+- - armL
+  - body_antDor
+- - paw_antL
+  - paw_postL
+- - armR
+  - body_dor
+- - tail_ant
+  - tail_mid
+- - digit_aR2
+  - paw_antR
+- - pupil_post
+  - pupil_vent
+- - mouth_latR
+  - mouth_open
+- - digit_aR5
+  - paw_antR
+- - eye_post
+  - pupil_vent
+- - body_dor
+  - elbow_L
+- - mouth_dor
+  - snoutR
+- - mouth_dor
+  - snoutL
+- - chest
+  - digit_aL5
+- - mouth_latR
+  - salivadrop
+- - eye_dor
+  - pupil_post
+- - ear_antDor
+  - ear_antVent
+- - snoutR
+  - whisk_venti
+- - armR
+  - eye_vent
+- - body_postVent
+  - tail_mid
+- - armR
+  - digit_aR4
+- - eye_post
+  - pupil_ant
+- - armR
+  - paw_antR
+- - snoutL
+  - snoutR
+- - digit_aL4
+  - paw_antL
+- - chest
+  - digit_aR4
+- - eye_ant
+  - pupil_ant
+- - body_postMax
+  - tail_ant
+- - chest
+  - mouth_latL
+- - body_postVent
+  - paw_postL
+- - armR
+  - body_post
+- - body_antDor
+  - body_dor
+- - tail_mid
+  - tail_post
+- - armR
+  - pupil_dor
+- - ear_vent
+  - eye_post
+- - whisk_dor
+  - whisk_venti
+- - chest
+  - digit_aR3
+- - mouth_latR
+  - snoutR
+- - mouth_latL
+  - mouth_vent
+- - armR
+  - chest
+- - armL
+  - digit_aL3
+- - digit_aL4
+  - paw_postL
+- - body_dor
+  - body_post
+- - body_antDor
+  - body_post
+- - body_post
+  - chest
+- - eye_vent
+  - pupil_post
+- - body_postMax
+  - body_postVent
+- - body_dor
+  - tail_ant
+- - eye_ant
+  - pupil_vent
+- - body_postVent
+  - elbow_L
+- - armL
+  - ear_antDor
+- - eye_ant
+  - snoutR
+- - mouth_latR
+  - whisk_dor
+- - armL
+  - body_dor
+- - ear_antDor
+  - eye_post
+- - paw_antL
+  - paw_antR
+- - pupil_dor
+  - pupil_vent
+- - mouth_latL
+  - mouth_open
+- - ear_dor
+  - eye_dor
+- - mouth_latR
+  - mouth_vent
+- - mouth_dor
+  - snoutTip
+- - eye_vent
+  - snoutL
+- - chest
+  - digit_aL4
+- - mouth_latR
+  - snoutL
+- - mouth_latL
+  - snoutTip
+- - ear_antDor
+  - ear_dor
+- - eye_dor
+  - snoutL
+- - mouth_vent
+  - salivadrop
+- - ear_antVent
+  - ear_postMax
+- - armR
+  - digit_aR3
+- - ear_dor
+  - eye_post
+- - digit_aL3
+  - paw_antL
+- - eye_vent
+  - pupil_ant
+- - ear_postMax
+  - ear_vent
+- - chest
+  - digit_aL3
+- - eye_ant
+  - pupil_dor
+- - ear_vent
+  - eye_dor
+- - mouth_dor
+  - mouth_latL
+- - chest
+  - mouth_dor
+- - body_antDor
+  - elbow_L
+- - armR
+  - mouth_latL
+- - digit_aR4
+  - paw_antR
+
+
+bodyparts: MULTI!
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 8
+alphavalue: 0.7
+colormap: plasma
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: multi-animal-imgaug
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
