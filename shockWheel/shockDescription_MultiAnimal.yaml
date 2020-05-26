@@ -5,7 +5,7 @@ date: May20
 multianimalproject: true
 
     # Project path (change when moving around)
-project_path: C:\Users\Windows\Desktop\Newfolder\maTest-tom-2020-05-25
+project_path: /home/rum/Desktop/DLC/NETWORKS/shockTestTKCTom-TKC-2020-05-20-multiAnimal
 
     # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
